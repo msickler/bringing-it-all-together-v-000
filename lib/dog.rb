@@ -49,7 +49,7 @@ class Dog
     new_dog = Dog.new(id:row[0], name:row[1], breed:row[2])
   end
 
-  def self.find_by_id(id:)
+  def self.find_by_id(id)
     sql = "SELECT * FROM dogs WHERE id = ? LIMIT 1"
     self.new_from_db(DB[:conn].execute(sql, id).first)
   end
