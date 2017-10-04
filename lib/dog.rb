@@ -18,6 +18,12 @@ class Dog
     DB[:conn].execute(sql)
   end
 
+  def self.drop_table 
+    sql = "TABLE DROP dogs"
+    DB[:conn].execute(sql)
+  end 
+  
+
 
 
 
